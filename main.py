@@ -125,12 +125,6 @@ if not st.session_state.articles:
 # COLORS
 # ============================================================
 
-BG = "#181825"
-
-CARD_BG = "rgba(36, 33, 58, 0.68)"
-
-CARD_BORDER = "rgba(180, 167, 255, 0.10)"
-
 TEXT = "#F5F3FF"
 
 TEXT_SOFT = "#B7B2D9"
@@ -139,11 +133,13 @@ ACCENT = "#B4A7FF"
 
 ACCENT_LIGHT = "#CFC7FF"
 
+CARD_BG = "rgba(36, 33, 58, 0.68)"
+
+CARD_BORDER = "rgba(180, 167, 255, 0.10)"
+
 SUMMARY_BG = "rgba(56, 50, 84, 0.45)"
 
 CONTEXT_BG = "rgba(48, 44, 76, 0.52)"
-
-BUTTON_BG = "rgba(180,167,255,0.06)"
 
 SHADOW = "0 6px 24px rgba(0,0,0,0.18)"
 
@@ -179,15 +175,22 @@ header {{
 }}
 
 .block-container {{
+
     max-width: 1180px;
+
     padding-top: 2rem;
+
     padding-bottom: 5rem;
 }}
 
 [data-testid="stVerticalBlockBorderWrapper"] {{
+
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
     padding: 0 !important;
 }}
 
@@ -195,11 +198,11 @@ header {{
 
     text-align: center;
 
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
 
     font-weight: 800;
 
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
 
     background: linear-gradient(
         135deg,
@@ -220,7 +223,7 @@ header {{
 
     font-size: 1rem;
 
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.3rem;
 }}
 
 .filter-panel {{
@@ -285,7 +288,7 @@ header {{
 
     text-align: left !important;
 
-    font-size: 1.06rem !important;
+    font-size: 1.05rem !important;
 
     font-weight: 700 !important;
 
@@ -331,7 +334,7 @@ header {{
     padding:
         0rem
         1.2rem
-        1.3rem
+        1.2rem
         1.2rem;
 }}
 
@@ -356,7 +359,7 @@ header {{
 
     font-weight: 700;
 
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
 
     border:
         1px solid
@@ -377,9 +380,9 @@ header {{
         1rem
         1.1rem;
 
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
 
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
 
     line-height: 1.85;
 
@@ -491,13 +494,9 @@ div[data-testid="stButton"] > button:hover {{
     transform: translateY(-1px);
 }}
 
-# ============================================================
-# MOBILE RESPONSIVE FIX
-# ============================================================
+@media (max-width: 768px) {{
 
-@media (max-width: 768px) {
-
-    .block-container {
+    .block-container {{
 
         padding-top: 0.8rem !important;
 
@@ -506,43 +505,43 @@ div[data-testid="stButton"] > button:hover {{
         padding-right: 0.7rem !important;
 
         padding-bottom: 4rem !important;
-    }
+    }}
 
-    .main-title {
+    .main-title {{
 
         font-size: 2.2rem !important;
 
         line-height: 1.2 !important;
 
         margin-bottom: 0.4rem !important;
-    }
+    }}
 
-    .sub-title {
+    .sub-title {{
 
         font-size: 0.88rem !important;
 
         margin-bottom: 1.5rem !important;
 
         padding: 0 0.4rem !important;
-    }
+    }}
 
-    .filter-panel {
+    .filter-panel {{
 
         padding: 0.9rem !important;
 
         border-radius: 18px !important;
 
         margin-bottom: 1.2rem !important;
-    }
+    }}
 
-    .news-card {
+    .news-card {{
 
         border-radius: 18px !important;
 
         margin-bottom: 12px !important;
-    }
+    }}
 
-    .title-btn div[data-testid="stButton"] > button {
+    .title-btn div[data-testid="stButton"] > button {{
 
         font-size: 0.95rem !important;
 
@@ -551,25 +550,23 @@ div[data-testid="stButton"] > button:hover {{
         padding:
             0.95rem
             1rem !important;
+    }}
 
-        min-height: auto !important;
-    }
-
-    .arrow {
+    .arrow {{
 
         display: none !important;
-    }
+    }}
 
-    .article-panel {
+    .article-panel {{
 
         padding:
             0rem
             0.9rem
             1rem
             0.9rem !important;
-    }
+    }}
 
-    .source-badge {
+    .source-badge {{
 
         font-size: 0.65rem !important;
 
@@ -578,10 +575,10 @@ div[data-testid="stButton"] > button:hover {{
             0.7rem !important;
 
         margin-bottom: 0.8rem !important;
-    }
+    }}
 
     .summary-box,
-    .context-box {
+    .context-box {{
 
         border-radius: 16px !important;
 
@@ -594,45 +591,45 @@ div[data-testid="stButton"] > button:hover {{
         line-height: 1.75 !important;
 
         margin-bottom: 0.8rem !important;
-    }
+    }}
 
-    .box-label {
+    .box-label {{
 
         font-size: 0.64rem !important;
 
         margin-bottom: 0.5rem !important;
-    }
+    }}
 
-    div[data-testid="stButton"] > button {
-
-        height: 46px !important;
-
-        border-radius: 14px !important;
-
-        font-size: 0.88rem !important;
-    }
-
-    .read-original-btn {
+    div[data-testid="stButton"] > button {{
 
         height: 46px !important;
 
         border-radius: 14px !important;
 
         font-size: 0.88rem !important;
-    }
+    }}
 
-    div[data-testid="column"] {
+    .read-original-btn {{
+
+        height: 46px !important;
+
+        border-radius: 14px !important;
+
+        font-size: 0.88rem !important;
+    }}
+
+    div[data-testid="column"] {{
 
         width: 100% !important;
-    }
+    }}
 
-    div[data-testid="stHorizontalBlock"] {
+    div[data-testid="stHorizontalBlock"] {{
 
         flex-direction: column !important;
 
         gap: 0.6rem !important;
-    }
-}
+    }}
+}}
 
 </style>
 """, unsafe_allow_html=True)
@@ -748,10 +745,6 @@ for article in st.session_state.articles:
         unsafe_allow_html=True
     )
 
-    # ========================================================
-    # HEADER ROW
-    # ========================================================
-
     header_col1, header_col2 = st.columns([20, 1])
 
     with header_col1:
@@ -783,10 +776,6 @@ for article in st.session_state.articles:
             unsafe_allow_html=True
         )
 
-    # ========================================================
-    # AUTO CLOSE + OPEN
-    # ========================================================
-
     if clicked:
 
         if (
@@ -801,10 +790,6 @@ for article in st.session_state.articles:
             st.session_state.expanded_article_uid = article_id
 
         st.rerun()
-
-    # ========================================================
-    # EXPANDED CONTENT
-    # ========================================================
 
     if is_open:
 
@@ -830,10 +815,6 @@ for article in st.session_state.articles:
             article["title"],
             cleaned_text
         )
-
-        # ====================================================
-        # SUMMARY
-        # ====================================================
 
         if summary_key not in st.session_state:
 
@@ -863,10 +844,6 @@ for article in st.session_state.articles:
             unsafe_allow_html=True
         )
 
-        # ====================================================
-        # BUTTONS
-        # ====================================================
-
         btn_col1, btn_col2 = st.columns(2)
 
         with btn_col1:
@@ -891,10 +868,6 @@ target="_blank">
 ''',
                 unsafe_allow_html=True
             )
-
-        # ====================================================
-        # DEEP CONTEXT
-        # ====================================================
 
         if context_clicked:
 
